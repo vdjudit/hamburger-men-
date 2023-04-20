@@ -9,39 +9,41 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <div class="container"></div>
-    <span class="glyphicon glyphicon-align-center" id="menuIcon"></span>
-    <div class="menu-box" id="menuBox">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">portfolio</a></li>
-        <li><a href="#">services</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
+
+    <div class="container">
+      <span class="glyphicon glyphicon-align-center" id="menuIcon"></span>
+      <div class="menu-box" id="menuBox">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">services</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
     </div>
 
     <script>
       let menuBox = document.getElementById('menuBox');
       let menuIcon = document.getElementById('menuIcon');
 
-      menuIcon.onclick = function(){
+      menuIcon.onclick = function () {
         menuBox.classList.toggle('open-menu');
 
-        if(menuBox.classList.contains("open-menu")){
-          <span class="glyphicon glyphicon-remove-circle"></span>
-          
+        if (menuBox.classList.contains('open-menu')) {
+          menuIcon.className = 'glyphicon glyphicon-remove-circle';
+        } else {
+          menuIcon.className = 'glyphicon glyphicon-align-center';
         }
-
-        else{
-          menuIcon.src = "images/menu.png";
-        }
-      }
+      };
     </script>
   </body>
 </html>
